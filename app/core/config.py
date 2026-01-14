@@ -13,6 +13,8 @@ class Settings(BaseSettings):
     AI_PROVIDER: str = "gemini"
     GEMINI_API_KEY: str | None = None
     OPENAI_API_KEY: str | None = None
+    YOUTUBE_API_KEY: str | None = None
+    REDIS_URL: str = "redis://localhost:6379"
 
     HOST: str = "127.0.0.1"
     PORT: int = 8000
