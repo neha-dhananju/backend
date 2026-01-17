@@ -7,7 +7,7 @@ router = APIRouter(prefix="/chat", tags=["Chat"])
 ai_service = AIService()
 
 
-@router.post("/", response_model=ChatResponse)
+@router.post("", response_model=ChatResponse)   # 👈 IMPORTANT CHANGE
 def chat(request: ChatRequest):
     result = ai_service.parse_message(request.message)
 
